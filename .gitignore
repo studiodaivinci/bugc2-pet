@@ -1,0 +1,25 @@
+# Your robot's Wi-Fi address and token (tools/wifi_setup.py writes it). Never commit it.
+tools/robot.local.json
+
+# Build output
+.pio/
+.venv/
+__pycache__/
+*.pyc
+firmware/*/pc/out/
+firmware/lib/*/pc/out/
+firmware/lib/game/pc/save_*.bin
+
+# Bench captures: mic recordings and screen grabs (the logs are kept)
+bench-output/**/*.wav
+bench-output/**/*.ppm
+bench-output/**/*.png
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Generated previews: rebuild them (pack.py --specimen) rather than commit them; they draw sample names
+art/game/design/type_specimen.png
+art/game/shots/

@@ -1,0 +1,153 @@
+   0.32 pet 0.8: face, hatching, song, golf, seven dances, Trick Lab with the remote (motors on)
+   0.32 state home, scene play, hatched 1, days 1, boots 66
+   0.32 stick 4050 mV (94%), base 4.08 V, volume 128, rotation 0, frames 1, motors on
+   0.32 heap 63376 (largest 32756), psram 1887616, wifi <ip>
+   0.32 remote not learned, 14 frames heard (268 edges), tricks remembered 0
+   0.32 built Nov 11 2026 13:14:52
+   0.32 OK
+ 180.23 state nap
+ 185.75 state doze
+ 199.65 press big
+ 199.65 state wake
+ 202.78 remote fe01ff00 (not one it knows)
+ 204.46 remote fe01ff00 (not one it knows)
+ 206.07 state home
+ 206.46 remote 3bc4ff00 (not one it knows)
+ 207.65 remote 36c9ff00 (not one it knows)
+ 208.42 remote 37c8ff00 (not one it knows)
+ 209.35 remote fa05ff00 (not one it knows)
+ 210.05 remote f807ff00 (not one it knows)
+ 210.88 remote 36c9ff00 (not one it knows)
+ 212.47 remote fe01ff00 (not one it knows)
+ 214.25 remote 36c9ff00 (not one it knows)
+ 214.92 remote f807ff00 (not one it knows)
+ 215.59 remote fa05ff00 (not one it knows)
+ 217.25 event pickup
+ 219.23 press big
+ 219.23 state menu
+ 223.22 press big
+ 223.37 state lab
+ 223.38 my remote: press the button for each of dash, scoot, spin, wiggle, go, freeze
+ 228.24 event putdown
+ 288.30 state home
+ 408.24 state nap
+ 413.77 state doze
+ 797.17 event pickup
+ 797.17 state wake
+ 798.73 press big
+ 798.73 state home
+ 800.37 press big
+ 800.37 state menu
+ 803.09 press big
+ 803.24 state lab
+ 803.24 my remote: press the button for each of dash, scoot, spin, wiggle, go, freeze
+ 805.20 event putdown
+ 807.67 remote f807ff00 (not one it knows)
+ 809.40 remote fa05ff00 (not one it knows)
+ 810.93 remote 36c9ff00 (not one it knows)
+ 812.28 remote 37c8ff00 (not one it knows)
+ 815.73 remote 3bc4ff00 (not one it knows)
+ 817.64 remote fe01ff00 (not one it knows)
+ 817.64 my remote: learned
+ 826.42 remote fa05ff00 scoot
+ 826.90 dance trick: finished, base 4.05 V
+ 826.90   scoot     423 ms  peak   499 deg/s  turned    +18 deg (0.1 turns)  steered, off by up to 34 deg
+ 827.72 remote f807ff00 dash
+ 828.25 dance trick: finished, base 4.07 V
+ 828.25   dash      453 ms  peak   266 deg/s  turned     +1 deg (0.0 turns)  steered, off by up to 23 deg
+ 829.33 remote fa05ff00 scoot
+ 829.81 dance trick: finished, base 4.06 V
+ 829.81   scoot     424 ms  peak   358 deg/s  turned    -23 deg (-0.1 turns)  steered, off by up to 32 deg
+ 830.61 remote f807ff00 dash
+ 831.13 dance trick: finished, base 4.06 V
+ 831.13   dash      453 ms  peak   238 deg/s  turned    +19 deg (0.1 turns)  steered, off by up to 19 deg
+ 834.05 remote 3bc4ff00 go
+ 837.46 dance trick: finished, base 4.08 V
+ 837.46   scoot     421 ms  peak   308 deg/s  turned    +26 deg (0.1 turns)  steered, off by up to 30 deg
+ 837.46   beat      261 ms  peak   463 deg/s  turned    -48 deg (-0.1 turns)
+ 837.46   dash      452 ms  peak   326 deg/s  turned    +43 deg (0.1 turns)  steered, off by up to 27 deg
+ 837.46   beat      261 ms  peak   444 deg/s  turned    -44 deg (-0.1 turns)
+ 837.47   scoot     422 ms  peak   517 deg/s  turned    +56 deg (0.2 turns)  steered, off by up to 44 deg
+ 837.47   beat      261 ms  peak   582 deg/s  turned    -48 deg (-0.1 turns)
+ 837.48   dash      456 ms  peak   380 deg/s  turned    +40 deg (0.1 turns)  steered, off by up to 37 deg
+ 837.48   tada      804 ms  peak   520 deg/s  turned    -36 deg (-0.1 turns)
+ 839.10 remote f807ff00 dash
+ 839.64 dance trick: finished, base 4.07 V
+ 839.64   dash      455 ms  peak   265 deg/s  turned    +15 deg (0.0 turns)  steered, off by up to 15 deg
+ 842.14 remote f807ff00 dash
+ 842.66 dance trick: finished, base 4.05 V
+ 842.66   dash      454 ms  peak   406 deg/s  turned    +29 deg (0.1 turns)  steered, off by up to 43 deg
+ 843.17 remote fa05ff00 scoot
+ 843.64 dance trick: finished, base 4.07 V
+ 843.65   scoot     421 ms  peak   404 deg/s  turned    +47 deg (0.1 turns)  steered, off by up to 51 deg
+ 844.73 remote 36c9ff00 spin
+ 845.34 dance trick: finished, base 4.06 V
+ 845.34   spin      553 ms  peak  2001 deg/s  turned   +142 deg (0.4 turns)
+ 848.01 remote 3bc4ff00 go
+ 851.52 dance trick: finished, base 4.07 V
+ 851.52   dash      456 ms  peak   335 deg/s  turned     +4 deg (0.0 turns)  steered, off by up to 31 deg
+ 851.52   beat      261 ms  peak   304 deg/s  turned    -40 deg (-0.1 turns)
+ 851.53   dash      453 ms  peak   519 deg/s  turned    +64 deg (0.2 turns)  steered, off by up to 45 deg
+ 851.53   beat      261 ms  peak   594 deg/s  turned    -63 deg (-0.2 turns)
+ 851.53   scoot     421 ms  peak   462 deg/s  turned    +59 deg (0.2 turns)  steered, off by up to 35 deg
+ 851.54   beat      261 ms  peak   499 deg/s  turned    -52 deg (-0.1 turns)
+ 851.54   spin      554 ms  peak  2001 deg/s  turned   +160 deg (0.4 turns)
+ 851.55   tada      804 ms  peak  2001 deg/s  turned   -339 deg (-0.9 turns)
+ 858.17 remote 37c8ff00 wiggle
+ 858.70 dance trick: finished, base 4.04 V
+ 858.71   wiggle    482 ms  peak  1226 deg/s  turned    -95 deg (-0.3 turns)
+ 861.01 remote 37c8ff00 wiggle
+ 861.55 dance trick: finished, base 4.07 V
+ 861.55   wiggle    482 ms  peak  1140 deg/s  turned    -89 deg (-0.2 turns)
+ 862.96 remote 37c8ff00 wiggle
+ 863.56 dance trick: finished, base 4.07 V
+ 863.57   wiggle    483 ms  peak  1157 deg/s  turned   -115 deg (-0.3 turns)
+ 863.92 remote 37c8ff00 wiggle
+ 864.46 dance trick: finished, base 4.06 V
+ 864.47   wiggle    482 ms  peak  1131 deg/s  turned    -74 deg (-0.2 turns)
+ 866.06 remote 37c8ff00 wiggle
+ 866.64 dance trick: finished, base 4.04 V
+ 866.64   wiggle    482 ms  peak  1175 deg/s  turned   -109 deg (-0.3 turns)
+ 867.23 remote 37c8ff00 wiggle
+ 867.76 dance trick: finished, base 4.06 V
+ 867.76   wiggle    482 ms  peak  1192 deg/s  turned    -91 deg (-0.3 turns)
+ 868.18 remote 37c8ff00 wiggle
+ 868.79 remote 37c8ff00 wiggle
+ 869.77 remote 3bc4ff00 go
+ 874.86 dance trick: finished, base 4.06 V
+ 874.86   wiggle    482 ms  peak  1078 deg/s  turned    -69 deg (-0.2 turns)
+ 874.86   beat      261 ms  peak   776 deg/s  turned    +50 deg (0.1 turns)
+ 874.86   wiggle    483 ms  peak  1142 deg/s  turned   -103 deg (-0.3 turns)
+ 874.86   beat      261 ms  peak   583 deg/s  turned    +30 deg (0.1 turns)
+ 874.87   wiggle    483 ms  peak  1094 deg/s  turned   -103 deg (-0.3 turns)
+ 874.87   beat      261 ms  peak   604 deg/s  turned    +31 deg (0.1 turns)
+ 874.87   wiggle    482 ms  peak  1094 deg/s  turned    -84 deg (-0.2 turns)
+ 874.87   beat      261 ms  peak   730 deg/s  turned    +48 deg (0.1 turns)
+ 874.88   wiggle    482 ms  peak  1116 deg/s  turned    -71 deg (-0.2 turns)
+ 874.88   beat      261 ms  peak   770 deg/s  turned    +49 deg (0.1 turns)
+ 874.88   wiggle    482 ms  peak  1080 deg/s  turned    -86 deg (-0.2 turns)
+ 874.89   tada      804 ms  peak   639 deg/s  turned    +38 deg (0.1 turns)
+ 881.90 remote 36c9ff00 spin
+ 882.53 dance trick: finished, base 4.03 V
+ 882.53   spin      555 ms  peak  2001 deg/s  turned   +107 deg (0.3 turns)
+ 883.96 remote 37c8ff00 wiggle
+ 884.52 dance trick: finished, base 4.06 V
+ 884.52   wiggle    483 ms  peak  1133 deg/s  turned    -93 deg (-0.3 turns)
+ 885.33 remote f807ff00 dash
+ 885.81 dance trick: finished, base 4.03 V
+ 885.82   dash      453 ms  peak   629 deg/s  turned    +12 deg (0.0 turns)  steered, off by up to 41 deg
+ 886.52 remote fa05ff00 scoot
+ 886.96 dance trick: finished, base 4.05 V
+ 886.97   scoot     425 ms  peak   457 deg/s  turned    +53 deg (0.1 turns)  steered, off by up to 57 deg
+ 891.17 remote 3bc4ff00 go
+ 895.16 dance trick: finished, base 4.04 V
+ 895.16   spin      554 ms  peak  2001 deg/s  turned   +144 deg (0.4 turns)
+ 895.17   beat      651 ms  peak  2001 deg/s  turned   -345 deg (-1.0 turns)
+ 895.17   wiggle    483 ms  peak   944 deg/s  turned    -91 deg (-0.3 turns)
+ 895.17   beat      261 ms  peak   589 deg/s  turned    +33 deg (0.1 turns)
+ 895.17   dash      457 ms  peak   485 deg/s  turned    +22 deg (0.1 turns)  steered, off by up to 40 deg
+ 895.18   beat      261 ms  peak   569 deg/s  turned    -54 deg (-0.2 turns)
+ 895.18   scoot     423 ms  peak   396 deg/s  turned    +68 deg (0.2 turns)  steered, off by up to 36 deg
+ 895.18   tada      804 ms  peak   335 deg/s  turned    -28 deg (-0.1 turns)
+1023.00 state home
+1082.93 state nap

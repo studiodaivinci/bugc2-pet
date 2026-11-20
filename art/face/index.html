@@ -1,0 +1,418 @@
+<title>Robot Faces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lilita+One&family=Rubik:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: a maker's bench. The robot sits on a green cutting mat (1 cm grid) on the left and stays in view;
+   the reel of animations runs down the right. Picks save as you click. One committed dark look: the mat. */
+:root {
+  --mat: #17342a;        /* cutting mat */
+  --mat-line: #1f4336;   /* its 1 cm grid */
+  --panel: #102620;      /* trays on the mat */
+  --panel-hi: #1a3a2f;
+  --ink: #f4efe3;        /* chalk-white text */
+  --mute: #a3bbaf;
+  --case: #f59a1b;       /* the Stick's orange case: the robot, and the active choice */
+  --case-deep: #b8650a;
+  --love: #34d3c8;       /* teal, the robot's eye colour */
+  --cut: #ff8a74;
+  --font-display: "Bagel Fat One", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-body: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", monospace;
+  --r: 14px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--mat); }
+body {
+  margin: 0; color: var(--ink); font: 400 15px/1.5 var(--font-body);
+  background-color: var(--mat);
+  background-image: linear-gradient(var(--mat-line) 1px, transparent 1px), linear-gradient(90deg, var(--mat-line) 1px, transparent 1px);
+  background-size: 1cm 1cm;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+button, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--case); outline-offset: 2px; }
+header.top { max-width: 1320px; margin: 0 auto; padding-block: 28px 18px; display: grid; gap: 8px; }
+h1 { font: 400 clamp(30px, 5vw, 46px)/1 var(--font-display); margin: 0; letter-spacing: 0.01em; color: var(--case); text-wrap: balance; }
+.lede { margin: 0; max-width: 70ch; color: var(--mute); }
+.lede b { color: var(--ink); font-weight: 500; }
+.tally { display: flex; flex-wrap: wrap; gap: 8px 16px; font: 500 13px/1.4 var(--font-mono); color: var(--mute); }
+.tally b { color: var(--ink); font-weight: 500; }
+.tally .sync { color: var(--mute); }
+
+main.bench { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { main.bench { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---- the robot */
+.robot { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); display: grid; gap: 14px; max-height: calc(100vh - 24px - env(safe-area-inset-top, 0px)); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding-right: 4px; }
+@media (max-width: 860px) { .robot { position: static; max-height: none; overflow: visible; padding-right: 0; } }
+.rig { display: flex; gap: 18px; align-items: flex-end; justify-content: center; }
+.stick { background: linear-gradient(160deg, #ffb43c, var(--case) 40%, var(--case-deep)); border-radius: 26px; padding: 16px 16px 14px; display: grid; justify-items: center; gap: 12px; box-shadow: 0 2px 0 #ffd28a inset, 0 -3px 0 #9a5208 inset, 0 18px 30px #0007; }
+.bezel { background: #0b0d10; border-radius: 10px; padding: 9px; box-shadow: 0 0 0 2px #00000033 inset; }
+#screen { display: block; width: 216px; height: 384px; border-radius: 3px; cursor: pointer; touch-action: none; image-rendering: auto; }
+.btnA { width: 82px; height: 30px; border-radius: 10px; border: 0; background: #e98b10; box-shadow: 0 3px 0 #9a5208, 0 1px 0 #ffcf80 inset; font: 400 15px/1 var(--font-display); color: #8a4a06; cursor: pointer; }
+.btnA:active { transform: translateY(2px); box-shadow: 0 1px 0 #9a5208; }
+.real { display: grid; justify-items: center; gap: 6px; font: 500 11px/1.3 var(--font-mono); color: var(--mute); text-align: center; }
+/* the panel is 1.14 inch diagonal: about 14 x 25 mm */
+#mini { width: 14mm; height: 24.8mm; background: #000; border-radius: 1px; box-shadow: 0 0 0 3px #0b0d10, 0 0 0 5px var(--case); }
+
+.now { background: var(--panel); border-radius: var(--r); padding: 14px 16px; display: grid; gap: 8px; }
+.now h2 { margin: 0; font: 400 22px/1.15 var(--font-display); }
+.now p { margin: 0; color: var(--mute); font-size: 14px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font: 500 11px/1 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 8px; border-radius: 99px; background: var(--panel-hi); color: var(--mute); }
+.chip.core { background: #3b2a0c; color: #ffc366; }
+.chip.should { background: #13343a; color: #8fe3dc; }
+.chip.explore { background: #2d2440; color: #c9b8ff; }
+.tool { border: 0; background: var(--panel-hi); border-radius: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
+.tool:hover { background: #24493c; }
+.tool[aria-pressed="true"] { background: var(--case); color: #1d1206; }
+.playctl { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 6px; }
+.hint { font-size: 12px; color: var(--mute); margin: 0; }
+
+.pick { background: var(--panel); border-radius: var(--r); padding: 12px; display: grid; gap: 10px; }
+.verdicts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.v { border: 2px solid transparent; background: var(--panel-hi); border-radius: 12px; padding: 10px 6px; cursor: pointer; font-weight: 600; display: grid; justify-items: center; gap: 2px; }
+.v small { font: 500 10px/1 var(--font-mono); color: var(--mute); letter-spacing: 0.05em; }
+.v:hover { border-color: #ffffff22; }
+.v.love[aria-pressed="true"] { background: var(--love); color: #062a27; }
+.v.keep[aria-pressed="true"] { background: var(--ink); color: #17342a; }
+.v.cut[aria-pressed="true"] { background: var(--cut); color: #3a0d05; }
+.v[aria-pressed="true"] small { color: inherit; opacity: 0.75; }
+#note { width: 100%; min-height: 58px; resize: vertical; background: #0b1d17; border: 1px solid #2a5244; border-radius: 10px; padding: 8px 10px; font-size: 14px; }
+#note::placeholder { color: #7f978b; }
+
+.look { background: var(--panel); border-radius: var(--r); padding: 12px; display: grid; gap: 10px; }
+.look h3 { margin: 0; font: 600 13px/1.3 var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; color: var(--mute); }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.seg .tool { display: grid; gap: 2px; text-align: left; padding: 8px 10px; }
+.seg .tool small { font: 500 10px/1.2 var(--font-mono); color: inherit; opacity: 0.7; letter-spacing: 0.04em; text-transform: uppercase; }
+
+/* ---- the reel */
+.reel { display: grid; gap: 26px; min-width: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; position: sticky; top: env(safe-area-inset-top, 0px); padding-block: 10px; z-index: 5; background: linear-gradient(var(--mat) 70%, transparent); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--mat); }
+.group h3 { margin: 0 0 10px; font: 400 21px/1.1 var(--font-display); display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.group h3 small { font: 500 12px/1 var(--font-mono); color: var(--mute); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(232px, 1fr)); gap: 10px; }
+@media (max-width: 520px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.card { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; padding: 10px; border-radius: var(--r); background: var(--panel); cursor: pointer; border: 2px solid transparent; align-items: start; }
+.card:hover { background: var(--panel-hi); }
+.card:focus-visible { outline: 3px solid var(--case); outline-offset: 2px; }
+.card[aria-current="true"] { border-color: var(--case); background: var(--panel-hi); }
+.card canvas { width: 76px; height: 135px; border-radius: 6px; background: #000; display: block; }
+.card .t { font-weight: 600; font-size: 15px; line-height: 1.25; }
+.card .w { color: var(--mute); font-size: 13px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; margin-top: 4px; }
+.card .m { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; font: 500 11px/1 var(--font-mono); color: var(--mute); }
+.verdict-badge { padding: 4px 7px; border-radius: 99px; font: 600 11px/1 var(--font-body); }
+.verdict-badge.love { background: var(--love); color: #062a27; }
+.verdict-badge.keep { background: var(--ink); color: #17342a; }
+.verdict-badge.cut { background: var(--cut); color: #3a0d05; }
+.card.is-cut canvas { opacity: 0.45; }
+.keys { font: 500 12px/1.6 var(--font-mono); color: var(--mute); }
+kbd { font: inherit; background: var(--panel-hi); border-radius: 5px; padding: 1px 6px; color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .btnA:active { transform: none; } }
+</style>
+
+<header class="top">
+  <h1>Robot Faces</h1>
+  <p class="lede">Every screen animation in the gift build, plus some ideas to try. They're drawn live by the same code that will run on the robot, at its real 135&nbsp;&times;&nbsp;240 pixels and its real colours (RGB565). <b>Pick the ones that are fun and look good:</b> Love it, Keep or Cut, and a note if something should change. Try each of the three looks too; one will become the robot's face.</p>
+  <div class="tally" id="tally" aria-live="polite"></div>
+</header>
+
+<main class="bench">
+  <section class="robot" aria-label="The robot">
+    <div class="rig">
+      <div class="stick">
+        <div class="bezel"><canvas id="screen" width="135" height="240" aria-label="The robot's screen. Click to tap it; drag to tilt it."></canvas></div>
+        <button class="btnA" id="btnA" type="button" aria-label="Press button A">M5</button>
+      </div>
+      <div class="real"><canvas id="mini" width="135" height="240" aria-hidden="true"></canvas><span>real size,<br>about</span></div>
+    </div>
+
+    <div class="pick" aria-label="Your pick for this animation">
+      <div class="verdicts">
+        <button class="v love" type="button" data-v="love" aria-pressed="false">Love it<small>key 1</small></button>
+        <button class="v keep" type="button" data-v="keep" aria-pressed="false">Keep<small>key 2</small></button>
+        <button class="v cut" type="button" data-v="cut" aria-pressed="false">Cut<small>key 3</small></button>
+      </div>
+      <label class="hint" for="note">Note (what to change)</label>
+      <textarea id="note" placeholder="e.g. slower, bigger hearts, use a different fact"></textarea>
+    </div>
+
+    <div class="now">
+      <h2 id="nowTitle">Living eyes</h2>
+      <p id="nowWhen"></p>
+      <div class="row" id="nowTags"></div>
+      <div class="playctl" id="playctl" hidden>
+        <button class="tool" type="button" data-ev="pickup">Pick up</button>
+        <button class="tool" type="button" data-ev="putdown">Put down</button>
+        <button class="tool" type="button" data-ev="shake">Shake</button>
+        <button class="tool" type="button" data-ev="pat">Pat</button>
+        <button class="tool" type="button" data-ev="flip">Flip over</button>
+        <button class="tool" type="button" data-ev="unflip">Turn back</button>
+        <button class="tool" type="button" data-ev="button">Press A</button>
+      </div>
+      <div class="row">
+        <button class="tool" type="button" id="replay">Replay</button>
+        <button class="tool" type="button" id="slow" aria-pressed="false">Slow motion</button>
+      </div>
+      <p class="hint" id="hint">Click the screen to tap it. Drag on it to tilt.</p>
+    </div>
+
+    <div class="look">
+      <h3>The look</h3>
+      <div class="seg" role="group" aria-label="Look">
+        <button class="tool" type="button" data-skin="marble" aria-pressed="true">Marble<small>bold</small></button>
+        <button class="tool" type="button" data-skin="ink" aria-pressed="false">Ink<small>wild</small></button>
+        <button class="tool" type="button" data-skin="glow" aria-pressed="false">Glow<small>safe</small></button>
+      </div>
+      <p class="hint" id="lookWhy"></p>
+      <div class="row" id="backs" role="group" aria-label="Background">
+        <button class="tool" type="button" data-back="" aria-pressed="true">Its own skin</button>
+        <button class="tool" type="button" data-back="night" aria-pressed="false">Night</button>
+        <button class="tool" type="button" data-back="black" aria-pressed="false">Black</button>
+        <button class="tool" type="button" data-back="cream" aria-pressed="false">Cream</button>
+      </div>
+      <div class="row">
+        <button class="tool" type="button" id="mouth" aria-pressed="true">Mouth</button>
+        <button class="tool" type="button" id="pickLook" aria-pressed="false">Make this the look</button>
+      </div>
+      <p class="keys"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> previous / next · <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> love / keep / cut · <kbd>R</kbd> replay · <kbd>S</kbd> slow</p>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="All animations">
+    <div class="filters" role="group" aria-label="Show">
+      <button class="tool" type="button" data-f="all" aria-pressed="true">All</button>
+      <button class="tool" type="button" data-f="core" aria-pressed="false">Core</button>
+      <button class="tool" type="button" data-f="should" aria-pressed="false">Should</button>
+      <button class="tool" type="button" data-f="explore" aria-pressed="false">Ideas</button>
+      <button class="tool" type="button" data-f="open" aria-pressed="false">Not picked yet</button>
+    </div>
+    <div id="groups"></div>
+  </section>
+</main>
+
+<script src="engine.js"></script>
+<script src="player.js"></script>
+<script src="scenes.js"></script>
+<script>
+(function () {
+'use strict';
+const SC = window.RF_SCENES;
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const GROUP_ORDER = ['Play', 'Hatching', 'Face', 'Moods', 'Handling', 'Animal powers', 'Games', 'Training', 'Everyday', 'Explore'];
+const PRIO = { core: 'Core', should: 'Should', explore: 'Idea' };
+const LOOK_WHY = {
+  marble: 'Glossy toy eyes with real irises, set into the robot\'s own orange so the screen\'s edge disappears into the case. Nobody else does robot eyes in skin.',
+  ink: 'A picture-book creature in hand-drawn ink that shimmers like animation drawn on paper. The most unusual; maybe the hardest to read across a room.',
+  glow: 'The robot-toy classic, done well: glowing pills on black, like Vector or Astro Bot. Safe, and familiar.',
+};
+// ---------- assets
+const ASSET_KEYS = ['cheetah', 'honeybee', 'hummingbird', 'spider', 'owl', 'dolphin', 'bat', 'chameleon', 'egg', 'cake', 'treat', 'flower', 'golfflag'];
+window.RF_ASSETS = {};
+for (const k of ASSET_KEYS) RF_ASSETS[k] = RF.loadBitmap('assets/' + k + '.png', k === 'egg' ? 112 : k === 'cake' ? 104 : 100);
+const assetsReady = new Promise(res => { const t0 = performance.now(); (function wait() { const ok = ASSET_KEYS.every(k => RF_ASSETS[k].ready); if (ok || performance.now() - t0 > 5000) res(); else setTimeout(wait, 60); })(); });
+
+// ---------- state
+const st = { id: SC[0].id, skin: 'marble', back: '', mouth: true, slow: false, filter: 'all', picks: {}, db: null, look: null };
+try { const s = JSON.parse(localStorage.getItem('rf-view') || '{}'); if (s.skin) st.skin = s.skin; if (typeof s.back === 'string') st.back = s.back; if (typeof s.mouth === 'boolean') st.mouth = s.mouth; } catch (e) {}
+const fromHash = () => { const h = decodeURIComponent(location.hash.slice(1)); return SC.find(s => s.id === h) ? h : null; };
+st.id = fromHash() || 'play';
+const opts = () => ({ skin: st.skin, back: st.back || null, mouth: st.mouth ? undefined : false });
+const scene = () => SC.find(s => s.id === st.id);
+
+// ---------- the live screen
+const cv = $('#screen'), mini = $('#mini'), mctx = mini.getContext('2d');
+let player = null, last = 0;
+function start() { player = new RF.Player(cv, scene(), opts()); }
+function frame(now) {
+  const dt = Math.min(0.05, (now - (last || now)) / 1000); last = now;
+  if (player) {
+    player.step(dt * (st.slow ? 0.35 : 1));
+    const d = scene().dur;
+    if (d && player.S.t > d + 0.6) player.reset();
+    player.draw();
+    mctx.drawImage(cv, 0, 0);
+  }
+  requestAnimationFrame(frame);
+}
+// tap and tilt
+let down = null;
+cv.addEventListener('pointerdown', e => { down = { x: e.clientX, y: e.clientY, moved: false }; cv.setPointerCapture(e.pointerId); });
+cv.addEventListener('pointermove', e => {
+  if (!down || !player) return;
+  const dx = e.clientX - down.x, dy = e.clientY - down.y;
+  if (Math.abs(dx) + Math.abs(dy) > 6) down.moved = true;
+  if (down.moved) player.S.data.drag = [Math.max(-1.5, Math.min(1.5, dx / 50)), Math.max(-1.5, Math.min(1.5, 1 + dy / 50))];
+});
+const up = () => { if (!down) return; if (!down.moved && player) player.tap(); if (player) player.S.data.drag = null; down = null; };
+cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
+$('#btnA').addEventListener('click', () => { if (!player) return; if (st.id === 'play') player.event('button'); else player.button(); });
+$$('#playctl [data-ev]').forEach(b => b.addEventListener('click', () => player && player.event(b.dataset.ev)));
+$('#replay').addEventListener('click', () => player && player.reset());
+$('#slow').addEventListener('click', () => { st.slow = !st.slow; $('#slow').setAttribute('aria-pressed', st.slow); });
+
+// ---------- the reel
+const cards = {};
+function buildReel() {
+  const host = $('#groups'); host.textContent = '';
+  for (const g of GROUP_ORDER) {
+    const list = SC.filter(s => s.group === g); if (!list.length) continue;
+    const sec = document.createElement('section'); sec.className = 'group'; sec.dataset.group = g;
+    const h = document.createElement('h3'); h.textContent = g === 'Play' ? 'Play with it' : g;
+    const sm = document.createElement('small'); sm.textContent = list.length + (list.length === 1 ? ' scene' : ' scenes'); h.appendChild(sm);
+    const grid = document.createElement('div'); grid.className = 'grid';
+    sec.append(h, grid); host.appendChild(sec);
+    for (const s of list) {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'card'; b.dataset.id = s.id;
+      const c = document.createElement('canvas'); c.width = 135; c.height = 240;
+      const body = document.createElement('div');
+      const t = document.createElement('div'); t.className = 't'; t.textContent = s.title;
+      const w = document.createElement('div'); w.className = 'w'; w.textContent = s.when || '';
+      const m = document.createElement('div'); m.className = 'm';
+      const ch = document.createElement('span'); ch.className = 'chip ' + s.prio; ch.textContent = PRIO[s.prio];
+      const du = document.createElement('span'); du.textContent = s.dur ? s.dur.toFixed(1) + ' s' : 'live';
+      const vb = document.createElement('span'); vb.className = 'verdict-badge'; vb.hidden = true;
+      m.append(ch, du, vb); body.append(t, w, m); b.append(c, body); grid.appendChild(b);
+      b.addEventListener('click', () => select(s.id, true));
+      cards[s.id] = { el: b, canvas: c, badge: vb, sec };
+    }
+  }
+}
+// poster frames, a few at a time so the page stays responsive
+let posterJob = 0;
+function renderPosters() {
+  const job = ++posterJob, ids = SC.map(s => s.id);
+  let i = 0;
+  (function next() {
+    if (job !== posterJob) return;
+    const t0 = performance.now();
+    while (i < ids.length && performance.now() - t0 < 30) {
+      const s = SC.find(x => x.id === ids[i]), c = cards[ids[i]].canvas;
+      try { new RF.Player(c, s, opts()).renderAt(s.poster); } catch (e) { console.error(s.id, e); }
+      i++;
+    }
+    if (i < ids.length) setTimeout(next, 0);
+  })();
+}
+function applyFilter() {
+  for (const s of SC) {
+    const p = st.picks[s.id], f = st.filter;
+    const show = f === 'all' || (f === 'open' ? !(p && p.verdict) : s.prio === f);
+    cards[s.id].el.hidden = !show;
+  }
+  for (const sec of $$('.group')) sec.hidden = $$('.card', sec).every(c => c.hidden);
+}
+$$('.filters [data-f]').forEach(b => b.addEventListener('click', () => { st.filter = b.dataset.f; $$('.filters [data-f]').forEach(x => x.setAttribute('aria-pressed', x === b)); applyFilter(); }));
+
+function select(id, fromClick) {
+  st.id = id; const s = scene();
+  if (location.hash.slice(1) !== id) history.replaceState(null, '', '#' + id);
+  $('#nowTitle').textContent = s.title; $('#nowWhen').textContent = s.when || '';
+  const tags = $('#nowTags'); tags.textContent = '';
+  for (const [cls, txt] of [[s.prio, PRIO[s.prio]], ['', s.group], ['', s.dur ? s.dur.toFixed(1) + ' s loop' : 'live']]) { const c = document.createElement('span'); c.className = 'chip ' + cls; c.textContent = txt; tags.appendChild(c); }
+  $('#playctl').hidden = id !== 'play';
+  $('#hint').textContent = id === 'play' ? 'Use the buttons, click the screen to pat it, drag on it to tilt.' : (s.tap || s.button) ? 'Interactive: click the screen to tap it' + (s.button ? ', or press the M5 button.' : '.') : id === 'googly' ? 'Drag on the screen to tilt it.' : 'It loops. Replay starts it over.';
+  for (const k in cards) cards[k].el.setAttribute('aria-current', k === id ? 'true' : 'false');
+  showPick();
+  start();
+  if (fromClick && window.matchMedia('(max-width: 860px)').matches) $('.robot').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+window.addEventListener('hashchange', () => { const h = fromHash(); if (h && h !== st.id) select(h); });
+
+// ---------- look
+function showLook() {
+  $$('.seg [data-skin]').forEach(b => b.setAttribute('aria-pressed', b.dataset.skin === st.skin));
+  $$('#backs [data-back]').forEach(b => b.setAttribute('aria-pressed', b.dataset.back === st.back));
+  $('#mouth').setAttribute('aria-pressed', st.mouth);
+  $('#lookWhy').textContent = LOOK_WHY[st.skin];
+  const L = st.look, mine = L && L.skin === st.skin && (L.back || '') === st.back && L.mouth === st.mouth;
+  $('#pickLook').setAttribute('aria-pressed', !!mine);
+  $('#pickLook').textContent = mine ? 'This is the look' : 'Make this the look';
+  try { localStorage.setItem('rf-view', JSON.stringify({ skin: st.skin, back: st.back, mouth: st.mouth })); } catch (e) {}
+}
+function lookChanged() { showLook(); start(); renderPosters(); }
+$$('.seg [data-skin]').forEach(b => b.addEventListener('click', () => { st.skin = b.dataset.skin; st.back = ''; lookChanged(); }));
+$$('#backs [data-back]').forEach(b => b.addEventListener('click', () => { st.back = b.dataset.back; lookChanged(); }));
+$('#mouth').addEventListener('click', () => { st.mouth = !st.mouth; lookChanged(); });
+$('#pickLook').addEventListener('click', () => { st.look = { skin: st.skin, back: st.back, mouth: st.mouth, updated: Date.now() }; write('_look', st.look); showLook(); tally(); });
+
+// ---------- picks: saved to the artifact's database (or this browser when there is none)
+function showPick() {
+  const p = st.picks[st.id] || {};
+  $$('.verdicts .v').forEach(b => b.setAttribute('aria-pressed', p.verdict === b.dataset.v));
+  if (document.activeElement !== $('#note')) $('#note').value = p.note || '';
+}
+function badge(id) {
+  const p = st.picks[id], c = cards[id]; if (!c) return;
+  const v = p && p.verdict;
+  c.badge.hidden = !v; c.badge.className = 'verdict-badge ' + (v || ''); c.badge.textContent = v === 'love' ? 'Love it' : v === 'keep' ? 'Keep' : v === 'cut' ? 'Cut' : '';
+  c.el.classList.toggle('is-cut', v === 'cut');
+}
+function tally() {
+  const vals = SC.map(s => st.picks[s.id]).filter(p => p && p.verdict);
+  const n = (v) => vals.filter(p => p.verdict === v).length;
+  const el = $('#tally'); el.textContent = '';
+  const add = (html) => { const s = document.createElement('span'); s.innerHTML = html; el.appendChild(s); };
+  add(`<b>${vals.length}</b> of ${SC.length} picked`);
+  add(`Love it <b>${n('love')}</b>`); add(`Keep <b>${n('keep')}</b>`); add(`Cut <b>${n('cut')}</b>`);
+  add(st.look ? `Look: <b>${st.look.skin[0].toUpperCase() + st.look.skin.slice(1)}</b>` : 'Look: not chosen');
+  const s = document.createElement('span'); s.className = 'sync'; s.id = 'sync'; s.textContent = st.syncMsg || ''; el.appendChild(s);
+}
+const chains = {};
+function write(id, body) {
+  if (!st.db) { try { const all = JSON.parse(localStorage.getItem('rf-picks') || '{}'); all[id] = body; localStorage.setItem('rf-picks', JSON.stringify(all)); } catch (e) {} return; }
+  chains[id] = (chains[id] || Promise.resolve()).then(() => st.db.doc('picks/' + id).set(body)).catch(err => { st.syncMsg = 'Couldn\'t save that pick (' + (err && err.code || 'error') + '). Try again in a moment.'; tally(); });
+}
+function setVerdict(v) {
+  const id = st.id, cur = st.picks[id] || {};
+  const body = { verdict: cur.verdict === v ? '' : v, note: $('#note').value.trim(), look: st.skin, updated: Date.now() };
+  st.picks[id] = body; write(id, body); showPick(); badge(id); tally(); applyFilter();
+}
+$$('.verdicts .v').forEach(b => b.addEventListener('click', () => setVerdict(b.dataset.v)));
+let noteTimer = 0;
+$('#note').addEventListener('input', () => {
+  clearTimeout(noteTimer); const id = st.id;
+  noteTimer = setTimeout(() => { const cur = st.picks[id] || {}; const body = { verdict: cur.verdict || '', note: $('#note').value.trim(), look: st.skin, updated: Date.now() }; if (body.note === (cur.note || '')) return; st.picks[id] = body; write(id, body); }, 700);
+});
+function loadPicks(all) {
+  st.picks = {}; st.look = null;
+  for (const k in all) { if (k === '_look') st.look = all[k]; else st.picks[k] = all[k]; }
+  for (const s of SC) badge(s.id); showPick(); showLook(); tally(); applyFilter();
+}
+async function connect() {
+  let db = null;
+  try { if (window.claude && window.claude.use) db = await window.claude.use('db'); } catch (e) { db = null; }
+  if (!db) { try { loadPicks(JSON.parse(localStorage.getItem('rf-picks') || '{}')); } catch (e) { loadPicks({}); } st.syncMsg = 'Picks are saved in this browser.'; tally(); return; }
+  st.db = db; st.syncMsg = 'Loading picks...'; tally();
+  const timer = setTimeout(() => { st.syncMsg = 'Picks can\'t be reached yet. New picks will still save.'; tally(); }, 10000);
+  db.collection('picks').onSnapshot(snap => {
+    if (!snap.metadata.fromCache) { clearTimeout(timer); st.syncMsg = 'Picks save as you click.'; }
+    const all = {}; for (const d of snap.docs) all[d.id] = d.data();
+    loadPicks(all);
+  }, err => { clearTimeout(timer); st.syncMsg = 'Picks are offline (' + err.code + '); this page can\'t save right now.'; tally(); });
+}
+
+// ---------- keys
+document.addEventListener('keydown', e => {
+  if (e.target.closest && e.target.closest('textarea, input')) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const vis = SC.filter(s => !cards[s.id].el.hidden), i = vis.findIndex(s => s.id === st.id);
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { const n = vis[Math.min(vis.length - 1, i + 1)]; if (n) { select(n.id); cards[n.id].el.scrollIntoView({ block: 'nearest' }); } e.preventDefault(); }
+  else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { const n = vis[Math.max(0, i - 1)]; if (n) { select(n.id); cards[n.id].el.scrollIntoView({ block: 'nearest' }); } e.preventDefault(); }
+  else if (e.key === '1') setVerdict('love'); else if (e.key === '2') setVerdict('keep'); else if (e.key === '3') setVerdict('cut');
+  else if (e.key === 'r' || e.key === 'R') player && player.reset();
+  else if (e.key === 's' || e.key === 'S') $('#slow').click();
+});
+
+// ---------- go
+buildReel(); showLook(); tally();
+RF.loadFonts(['30px "Bagel Fat One"', '20px "Lilita One"']).then(() => assetsReady).then(() => {
+  select(st.id); renderPosters(); requestAnimationFrame(frame); connect();
+  document.title = document.title; window.RF_READY = true;
+});
+})();
+</script>

@@ -1,0 +1,16 @@
+# The robot: the Trick Lab menu icon (2026-11-11). Same spine as prompts-toys.txt.
+# Shown at about 34 px in the menu, so one bold silhouette. Trick Lab is played with the six-button remote, so the icon
+# is the remote (or a wand: "tricks"). Royal blue, which no other menu icon uses, so it reads on the orange and cream
+# boxes beside the yellow bee, the red flag and the teal speaker.
+
+# 1 a toy remote, tilted
+A single chunky painted wooden toy remote control, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a fat rounded bar in bright royal blue with six big round buttons in two columns, coloured red, yellow, lime green, purple, green and cream, and a short stubby cream antenna with a red ball on its tip. Tilted to the right like a magic wand, a big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 2 a toy remote, upright, fewer bigger buttons
+A single chunky painted wooden toy remote control, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a short fat rounded rectangle in bright royal blue with a cream face, four very big round buttons in red, yellow, lime green and purple, and one big round red light at the top. A big simple silhouette that reads from across a room, as chunky as a baby's toy. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, tilted a little, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 3 a toy magic wand
+A single chunky painted wooden toy magic wand, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a short fat royal blue stick with cream stripes, and on its tip a big puffy five-pointed star in bright yellow with a small red dome in its centre. Tilted to the right, a big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 4 a toy joystick
+A single chunky painted wooden toy joystick, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a fat round royal blue base with two big round buttons in yellow and lime green, and a short thick cream stick standing up from it with a big round red ball on top. A big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Three-quarter front view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.

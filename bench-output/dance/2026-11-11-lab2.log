@@ -1,0 +1,15 @@
+   0.31 pet 0.8: face, hatching, song, golf, seven dances, Trick Lab with the remote (motors on)
+   0.32 state home, scene play, hatched 1, days 1, boots 66
+   0.32 stick 4110 mV (100%), base 4.08 V, volume 128, rotation 0, frames 1, motors on
+   0.32 heap 67128 (largest 36852), psram 1887616, wifi <ip>
+   0.32 remote not learned, 0 frames heard (9 edges), tricks remembered 0
+   0.32 built Nov 11 2026 13:14:52
+   0.32 OK
+  37.26 event pickup
+  53.67 event putdown
+  54.35 remote 37c8ff00 (not one it knows)
+  56.86 remote 36c9ff00 (not one it knows)
+  57.59 remote fe01ff00 (not one it knows)
+  58.25 remote 3bc4ff00 (not one it knows)
+  59.14 remote fa05ff00 (not one it knows)
+  60.06 remote f807ff00 (not one it knows)

@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Dump</title>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lilita+One&display=swap" rel="stylesheet">
+<style>html,body{margin:0;background:#000}canvas{position:absolute;display:block}</style>
+</head><body>
+<!-- Draws a grid of scene@time cells, 135x240 each with no gaps, exactly like the firmware's PC harness
+     (firmware/lib/face/pc/sim.cpp grid), so tools/compare.py can diff the two. ?cells=id@t,id@t&cols=N&skin=marble -->
+<script src="engine.js"></script><script src="player.js"></script><script src="scenes.js"></script>
+<script>
+const q = new URLSearchParams(location.search);
+const cells = (q.get('cells') || '').split(',').filter(Boolean).map(c => { const [id, t] = c.split('@'); return { id, t: +t }; });
+const cols = +(q.get('cols') || 7), skin = q.get('skin') || 'marble';
+const ASSET_KEYS = ['cheetah','honeybee','hummingbird','spider','owl','dolphin','bat','chameleon','egg','cake','treat','flower','golfflag'];
+window.RF_ASSETS = {};
+for (const k of ASSET_KEYS) RF_ASSETS[k] = RF.loadBitmap('assets/' + k + '.png', k === 'egg' ? 112 : k === 'cake' ? 104 : 100);
+const ready = () => ASSET_KEYS.every(k => RF_ASSETS[k].ready);
+RF.loadFonts(['30px "Bagel Fat One"', '20px "Lilita One"'])
+  .then(() => new Promise(r => { const t0 = performance.now(); (function w() { if (ready() || performance.now() - t0 > 5000) r(); else setTimeout(w, 50); })(); }))
+  .then(() => {
+    cells.forEach((c, k) => {
+      const sc = RF_SCENES.find(s => s.id === c.id);
+      const cv = document.createElement('canvas'); cv.width = 135; cv.height = 240;
+      cv.style.left = (k % cols) * 135 + 'px'; cv.style.top = Math.floor(k / cols) * 240 + 'px';
+      document.body.appendChild(cv);
+      if (!sc) return;
+      try { new RF.Player(cv, sc, { skin }).renderAt(c.t); } catch (e) { console.error(c.id, e.stack); }
+    });
+    document.title = 'ready';
+  });
+</script></body></html>

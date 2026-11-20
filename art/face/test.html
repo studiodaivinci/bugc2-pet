@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Face test</title>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{background:#222;color:#ddd;font:12px system-ui;margin:10px}
+.row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.cell{display:flex;flex-direction:column;align-items:center;gap:3px}
+canvas{width:135px;height:240px;image-rendering:auto;border-radius:6px}
+.big canvas{width:270px;height:480px}
+</style></head><body>
+<div id="out"></div>
+<script src="engine.js"></script>
+<script>
+const q = new URLSearchParams(location.search);
+const skins = (q.get('skins') || 'glow,marble,ink').split(',');
+const exprs = (q.get('expr') || 'neutral,happy,joy,love,starry,sleepy,sad,grumpy,scared,surprised,suspicious,proud,curious,dizzy,xx,focused,hungry').split(',');
+const back = q.get('back') || null;
+const big = q.get('big');
+if (big) document.body.classList.add('big');
+document.fonts.ready.then(() => {
+  const out = document.getElementById('out');
+  for (const sk of skins) {
+    const row = document.createElement('div'); row.className = 'row'; out.appendChild(row);
+    for (const ex of exprs) {
+      const cell = document.createElement('div'); cell.className = 'cell';
+      const cv = document.createElement('canvas'); cv.width = 135; cv.height = 240;
+      cell.appendChild(cv); const lab = document.createElement('div'); lab.textContent = sk + ' ' + ex; cell.appendChild(lab);
+      row.appendChild(cell);
+      const scr = new RF.Screen(135, 240);
+      const face = new RF.Face(scr, { skin: sk, back });
+      face.autoBlink = false; face.autoLook = false;
+      face.set(ex);
+      for (let i = 0; i < 120; i++) face.update(1 / 60);
+      face.draw();
+      if (q.get('caption')) RF.text(scr, q.get('caption'), 67.5, 212, { size: 22, color: face.skin.text, outline: 2, oc: face.skin.textOutline });
+      scr.present(cv.getContext('2d'));
+    }
+  }
+  document.title = 'ready';
+});
+</script></body></html>

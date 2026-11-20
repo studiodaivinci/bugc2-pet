@@ -1,0 +1,57 @@
+# Big button only (no side button): title choices, hold to pause, Back to robot, carry on, Back to robot on the title.
+reset
+days -1
+wait 0.6
+shot m01_title
+tilt 0 0.5
+wait 0.3
+tilt 0 0
+wait 0.3
+shot m02_title_robot
+tilt 0 -0.5
+wait 0.3
+tilt 0 0
+wait 0.3
+a
+wait 0.5
+a
+wait 0.5
+a
+wait 2.2
+a
+wait 0.4
+adown
+wait 1.0
+shot m03_rising
+wait 1.4
+shot m04_emptied
+wait 0.6
+shot m05_filling
+wait 0.7
+shot m06_menu
+aup
+wait 0.5
+tilt 0 0.5
+wait 0.3
+tilt 0 0
+wait 0.3
+shot m07_menu_robot
+a
+wait 0.3
+begin
+wait 0.6
+shot m08_resume
+tilt 0 0.5
+wait 0.3
+tilt 0 0
+wait 0.3
+shot m09_resume_new
+a
+wait 0.6
+shot m10_title_again
+tilt 0 0.5
+wait 0.3
+tilt 0 0
+wait 0.3
+a
+wait 0.3

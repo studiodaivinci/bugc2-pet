@@ -1,0 +1,16 @@
+# The robot: the Sound on/off menu icon (2026-11-11). Same spine as prompts-toys.txt.
+# Shown at about 34 px in the menu, so one bold silhouette that says "sound" the way a tablet's speaker icon does.
+# Teal like the robot's own eyes (#13b5ae), so it reads on the menu's orange and cream boxes. Off = the same toy, dimmed
+# with a red slash (drawn by the menu), so it must read as "sound" on its own.
+
+# 1 a toy loudspeaker, side on like the speaker icon
+A single chunky painted wooden toy loudspeaker, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a small rounded square box in bright teal with a big flared cone opening out to the right like a trumpet bell, the cone cream inside with a round red dome in its centre. A big simple silhouette that reads from across a room, shaped like the speaker icon on a tablet. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Side view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 2 a toy megaphone
+A single chunky painted wooden toy megaphone, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a wide cone in bright teal with one cream stripe round its wide end, a short round red mouthpiece at the narrow end and a chunky cream handle underneath. Pointing to the right, a big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Side view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 3 a toy hand bell
+A single chunky painted wooden toy hand bell, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a wide round bell in shiny gold with a teal band round its rim, a round red clapper peeking out underneath, a chunky teal wooden handle on top with a cream ball at its end. Tilted a little as if it is ringing, a big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 4 a toy gramophone horn
+A single chunky painted wooden toy gramophone, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a small round cream box with a big teal flower-shaped horn curving up and opening wide to the right, the inside of the horn red. A big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Three-quarter side view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.

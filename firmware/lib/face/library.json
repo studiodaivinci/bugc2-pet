@@ -1,0 +1,11 @@
+{
+  "name": "face",
+  "version": "0.1.0",
+  "description": "The robot's face: eyes, moods and the 53 screen scenes (C++ port of art/face, see art/face/DESIGN.md)",
+  "frameworks": ["arduino"],
+  "platforms": ["espressif32"],
+  "build": {
+    "srcDir": "src",
+    "flags": "-O2 -fno-math-errno -freciprocal-math -fno-signed-zeros -fno-trapping-math"
+  }
+}

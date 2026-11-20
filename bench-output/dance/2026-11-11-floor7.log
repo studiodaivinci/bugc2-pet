@@ -1,0 +1,205 @@
+   0.25 pet 0.6: face, hatching, song, golf, seven dances that travel, with sound (motors on)
+   0.25 state home, scene play, hatched 1, days 1, boots 62
+   0.25 stick 4272 mV (100%), base 4.09 V, volume 128 (muted), rotation 0, frames 1, motors on
+   0.25 heap 69568 (largest 36852), psram 1887576, wifi <ip>
+   0.25 built Nov 11 2026 12:34:47
+   0.25 OK
+ 116.96 state nap
+ 122.50 state doze
+ 208.00 event pickup
+ 208.00 state wake
+ 211.32 press big
+ 211.32 state home
+ 212.21 press big
+ 212.21 state menu
+ 214.34 press big
+ 214.42 sound on (menu)
+ 215.64 press big
+ 215.72 state pick
+ 217.13 press big
+ 218.05 state power
+ 218.72 event shake
+ 220.77 event putdown
+ 220.77 on the floor
+ 223.00 dancing: cheetah
+ 223.29 event pickup
+ 224.22 event shake
+ 228.12 event putdown
+ 228.85 dance cheetah: finished, base 4.08 V
+ 228.85   stalk     601 ms  peak   474 deg/s  turned    -20 deg (-0.1 turns)  steered, off by up to 19 deg
+ 228.85   pounce    304 ms  peak   656 deg/s  turned    +49 deg (0.1 turns)  steered, off by up to 28 deg
+ 228.86   sprint   1302 ms  peak  2001 deg/s  turned  +1725 deg (4.8 turns)
+ 228.86   breath    304 ms  peak  2001 deg/s  turned   +101 deg (0.3 turns)
+ 228.87   again     905 ms  peak  2001 deg/s  turned  +1267 deg (3.5 turns)
+ 228.87   coast     404 ms  peak  2001 deg/s  turned    -57 deg (-0.2 turns)
+ 228.87   pant     2001 ms  peak  1900 deg/s  turned   -212 deg (-0.6 turns)
+ 228.87 state home
+ 232.39 event pickup
+ 233.81 press big
+ 233.81 state menu
+ 234.98 press big
+ 235.12 state pick
+ 236.85 press big
+ 237.68 state power
+ 237.98 event shake
+ 241.08 event putdown
+ 241.08 on the floor
+ 245.91 dancing: honeybee
+ 246.72 event pickup
+ 247.53 event shake
+ 251.92 dance honeybee: finished, base 4.07 V
+ 251.92   bzz       504 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 251.92   waggle    600 ms  peak   664 deg/s  turned    -17 deg (-0.0 turns)  steered, off by up to 33 deg
+ 251.94   round     452 ms  peak   703 deg/s  turned   -206 deg (-0.6 turns)  steered, off by up to 47 deg
+ 251.94   back      301 ms  peak   505 deg/s  turned    +67 deg (0.2 turns)  steered, off by up to 57 deg
+ 251.94   round     452 ms  peak   929 deg/s  turned   -253 deg (-0.7 turns)  steered, off by up to 52 deg
+ 251.95   waggle    600 ms  peak  1042 deg/s  turned    +64 deg (0.2 turns)  steered, off by up to 61 deg
+ 251.96   round     453 ms  peak  1296 deg/s  turned   +214 deg (0.6 turns)  steered, off by up to 100 deg
+ 251.96   back      301 ms  peak   551 deg/s  turned    -51 deg (-0.1 turns)  steered, off by up to 51 deg
+ 251.97   round     450 ms  peak  1072 deg/s  turned   +241 deg (0.7 turns)  steered, off by up to 55 deg
+ 251.97   waggle    601 ms  peak   764 deg/s  turned   -129 deg (-0.4 turns)  steered, off by up to 65 deg
+ 251.97   bloom    1189 ms  peak   506 deg/s  turned    -43 deg (-0.1 turns)
+ 251.98 event putdown
+ 252.06 state home
+ 360.40 event pickup
+ 360.63 event shake
+ 362.91 press big
+ 362.91 state menu
+ 364.05 press big
+ 364.20 state pick
+ 372.77 event shake
+ 373.91 event putdown
+ 374.21 event pickup
+ 378.44 press big
+ 379.36 state power
+ 381.03 event putdown
+ 381.03 on the floor
+ 387.08 dancing: hummingbird
+ 387.84 event pickup
+ 391.03 event shake
+ 393.30 event putdown
+ 393.70 dance hummingbird: finished, base 4.09 V
+ 393.71   hum       300 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 393.71   hover     804 ms  peak   383 deg/s  turned    +27 deg (0.1 turns)
+ 393.71   dart      303 ms  peak   617 deg/s  turned   +102 deg (0.3 turns)  steered, off by up to 51 deg
+ 393.73   sip       900 ms  peak   645 deg/s  turned     +5 deg (0.0 turns)
+ 393.74   backout   303 ms  peak   503 deg/s  turned    -39 deg (-0.1 turns)  steered, off by up to 76 deg
+ 393.74   dart      303 ms  peak   596 deg/s  turned    -89 deg (-0.2 turns)  steered, off by up to 112 deg
+ 393.74   sip       600 ms  peak   440 deg/s  turned    +10 deg (0.0 turns)
+ 393.75   backout   303 ms  peak   554 deg/s  turned    -22 deg (-0.1 turns)  steered, off by up to 41 deg
+ 393.76   dive      703 ms  peak  2001 deg/s  turned   +421 deg (1.2 turns)
+ 393.76   brake     250 ms  peak  2001 deg/s  turned   +137 deg (0.4 turns)
+ 393.76   hover     355 ms  peak  2001 deg/s  turned   -261 deg (-0.7 turns)
+ 393.76   happy    1476 ms  peak    96 deg/s  turned     +0 deg (0.0 turns)
+ 393.76 state home
+ 395.54 event pickup
+ 396.58 press big
+ 396.58 state menu
+ 397.74 press big
+ 397.90 state pick
+ 401.40 press big
+ 402.19 state power
+ 404.09 event putdown
+ 404.09 on the floor
+ 408.02 dancing: spider
+ 408.41 event pickup
+ 409.48 event shake
+ 413.52 event putdown
+ 413.70 dance spider: finished, base 4.08 V
+ 413.71   creep     352 ms  peak   288 deg/s  turned    +22 deg (0.1 turns)  steered, off by up to 18 deg
+ 413.71   shiver    403 ms  peak   548 deg/s  turned    -41 deg (-0.1 turns)
+ 413.71   eek       481 ms  peak   702 deg/s  turned     +8 deg (0.0 turns)  steered, off by up to 41 deg
+ 413.72   shiver   1304 ms  peak   520 deg/s  turned    +21 deg (0.1 turns)
+ 413.72   eek       482 ms  peak  1154 deg/s  turned    +81 deg (0.2 turns)  steered, off by up to 87 deg
+ 413.73   shiver   1305 ms  peak   574 deg/s  turned    -15 deg (-0.0 turns)
+ 413.73   phew     1276 ms  peak   126 deg/s  turned     +0 deg (0.0 turns)
+ 413.73 state home
+ 414.70 event pickup
+ 415.79 press big
+ 415.80 state menu
+ 418.02 press big
+ 418.17 state pick
+ 421.22 press big
+ 421.98 state power
+ 424.03 event putdown
+ 424.03 on the floor
+ 429.64 dancing: owl
+ 430.63 event pickup
+ 430.99 event shake
+ 435.04 dance owl: finished, base 4.07 V
+ 435.05   stare     451 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 435.05   blink     201 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 435.05   stare     200 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 435.05   look      403 ms  peak  2001 deg/s  turned   -539 deg (-1.5 turns)
+ 435.06   hold      499 ms  peak  2001 deg/s  turned   -514 deg (-1.4 turns)
+ 435.06   back      403 ms  peak  2001 deg/s  turned   +481 deg (1.3 turns)
+ 435.06   hoo       493 ms  peak  2001 deg/s  turned   +505 deg (1.4 turns)
+ 435.06   look      403 ms  peak  2001 deg/s  turned   +518 deg (1.4 turns)
+ 435.07   hold      499 ms  peak  2001 deg/s  turned   +494 deg (1.4 turns)
+ 435.07   back      403 ms  peak  2001 deg/s  turned   -557 deg (-1.5 turns)
+ 435.07   hoo      1395 ms  peak  2001 deg/s  turned   -517 deg (-1.4 turns)
+ 435.07 state home
+ 435.54 event putdown
+ 454.09 event pickup
+ 455.36 press big
+ 455.36 state menu
+ 456.51 press big
+ 456.72 sound off (menu)
+ 458.71 press big
+ 458.86 sound on (menu)
+ 459.73 press big
+ 459.81 state pick
+ 464.89 press big
+ 465.81 state power
+ 467.38 event putdown
+ 467.38 on the floor
+ 473.30 dancing: dolphin
+ 473.53 event pickup
+ 474.17 event shake
+ 477.17 event shake
+ 479.77 dance dolphin: finished, base 4.07 V
+ 479.77   swim      754 ms  peak   447 deg/s  turned    +72 deg (0.2 turns)  steered, off by up to 22 deg
+ 479.77   spin      503 ms  peak  2001 deg/s  turned     -5 deg (-0.0 turns)
+ 479.77   splash    394 ms  peak  2001 deg/s  turned   -188 deg (-0.5 turns)
+ 479.78   spin      503 ms  peak  2001 deg/s  turned   +244 deg (0.7 turns)
+ 479.78   splash    399 ms  peak  2001 deg/s  turned   -126 deg (-0.3 turns)
+ 479.78   spin      503 ms  peak  2001 deg/s  turned   +278 deg (0.8 turns)
+ 479.79   splash    294 ms  peak  2001 deg/s  turned   +101 deg (0.3 turns)
+ 479.79   bigleap  1205 ms  peak  2001 deg/s  turned  +1859 deg (5.2 turns)
+ 479.79   splash    546 ms  peak  2001 deg/s  turned   -242 deg (-0.7 turns)
+ 479.80   swim      805 ms  peak   830 deg/s  turned    -68 deg (-0.2 turns)  steered, off by up to 27 deg
+ 479.80   bubbles   546 ms  peak   305 deg/s  turned    -28 deg (-0.1 turns)
+ 479.80 state home
+ 480.95 event putdown
+ 485.58 event pickup
+ 486.74 press big
+ 486.74 state menu
+ 487.91 press big
+ 488.05 state pick
+ 495.81 press big
+ 496.71 state power
+ 497.37 event shake
+ 498.58 event putdown
+ 498.58 on the floor
+ 499.95 event pickup
+ 501.36 event putdown
+ 504.41 dancing: whirligig
+ 504.64 event pickup
+ 505.85 event shake
+ 508.78 event shake
+ 511.77 event shake
+ 513.78 event putdown
+ 514.42 dance whirligig: finished, base 4.07 V
+ 514.43   paddle    802 ms  peak   802 deg/s  turned   +225 deg (0.6 turns)  steered, off by up to 67 deg
+ 514.43   rev1      354 ms  peak  2001 deg/s  turned   -546 deg (-1.5 turns)
+ 514.43   rev2      350 ms  peak  2001 deg/s  turned   +399 deg (1.1 turns)
+ 514.43   rev3      302 ms  peak  1983 deg/s  turned   +602 deg (1.7 turns)
+ 514.43   halo     2002 ms  peak  1983 deg/s  turned  +3964 deg (11.0 turns)
+ 514.44   comets   1703 ms  peak  1983 deg/s  turned  +3377 deg (9.4 turns)
+ 514.44   galaxy   1701 ms  peak  1983 deg/s  turned  +3373 deg (9.4 turns)
+ 514.44   slow      502 ms  peak  1983 deg/s  turned   +995 deg (2.8 turns)
+ 514.45   dizzy    2235 ms  peak  2001 deg/s  turned   -354 deg (-1.0 turns)
+ 514.66 state home
+ 595.69 event pickup
+ 604.07 event shake
+ 609.26 event putdown

@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Font test</title>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lilita+One&family=Fredoka:wght@600;700&family=Baloo+2:wght@800&family=Titan+One&family=Chewy&family=Rubik:wght@800&family=Mochiy+Pop+One&family=Sniglet:wght@800&display=swap" rel="stylesheet">
+<style>body{background:#222;color:#ddd;font:12px system-ui;margin:10px}.row{display:flex;gap:10px;margin-bottom:10px}.cell{text-align:center}canvas{width:270px;height:480px}</style>
+</head><body><div id="out"></div>
+<script src="engine.js"></script>
+<script>
+const fonts = [['Bagel Fat One','400'],['Lilita One','400'],['Fredoka','700'],['Baloo 2','800'],['Titan One','400'],['Chewy','400'],['Rubik','800'],['Mochiy Pop One','400'],['Sniglet','800']];
+Promise.all(fonts.map(f => document.fonts.load(`${f[1]} 20px "${f[0]}"`))).then(() => {
+  const out = document.getElementById('out'); const row = document.createElement('div'); row.className = 'row'; out.appendChild(row);
+  for (const [fn, wt] of fonts) {
+    const cell = document.createElement('div'); cell.className = 'cell';
+    const cv = document.createElement('canvas'); cv.width = 135; cv.height = 240; cell.appendChild(cv);
+    cell.appendChild(document.createTextNode(fn)); row.appendChild(cell);
+    const scr = new RF.Screen(135, 240); const s = RF.SKINS.marble;
+    scr.fillGradient(s.bg, s.bg2, 5);
+    const o = (size, extra) => Object.assign({ font: fn, weight: wt, size, color: s.text, outline: 2, oc: s.textOutline }, extra || {});
+    RF.text(scr, 'Wheee!', 67.5, 22, o(28));
+    RF.text(scr, 'GO!', 67.5, 58, o(40));
+    RF.text(scr, 'CHEETAH', 67.5, 94, o(24));
+    RF.text(scr, 'Tap me to help', 67.5, 124, o(15));
+    RF.text(scr, 'me hatch!', 67.5, 142, o(15));
+    RF.text(scr, 'Are you...', 67.5, 168, o(18));
+    RF.text(scr, 'Friend?', 67.5, 192, o(24));
+    RF.text(scr, 'Hole in one! 0.31s', 67.5, 222, o(13, { outline: 1.5 }));
+    scr.present(cv.getContext('2d'));
+  }
+  document.title = 'ready';
+});
+</script></body></html>

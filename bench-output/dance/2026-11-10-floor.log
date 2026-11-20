@@ -1,0 +1,51 @@
+   0.65 motors on
+   0.65 OK
+   0.65 pet 0.2: face, hatching, song, golf, dances (motors on)
+   0.65 state home, scene play, hatched 1, days 0, boots 53
+   0.65 stick 4200 mV (100%), base 4.12 V, volume 128 (muted), rotation 0, frames 1, motors on
+   0.65 heap 73752 (largest 42996), psram 1887576, wifi <ip>
+   0.65 built Nov 10 2026 07:23:07
+   0.65 OK
+ 160.24 event pickup
+ 161.68 event shake
+ 170.24 press big
+ 170.24 state menu
+ 181.30 press big
+ 181.30 state power
+ 184.53 press big
+ 192.43 event putdown
+ 192.43 on the floor
+ 192.85 dancing: cheetah
+ 193.63 event pickup
+ 193.88 event shake
+ 196.71 event putdown
+ 197.47 dance cheetah: finished, base 4.12 V
+ 197.47   revup     600 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 197.47   spin     1601 ms  peak  2001 deg/s  turned  +2381 deg (6.6 turns)
+ 197.47   coast     404 ms  peak  2001 deg/s  turned   -109 deg (-0.3 turns)
+ 197.48   pant     2001 ms  peak  1702 deg/s  turned   -157 deg (-0.4 turns)
+ 197.50 state home
+ 212.01 event pickup
+ 214.61 press big
+ 214.61 state menu
+ 216.63 press big
+ 216.63 state power
+ 219.79 event putdown
+ 219.79 on the floor
+ 224.20 dancing: honeybee
+ 224.82 event pickup
+ 224.86 event shake
+ 228.35 dance honeybee: finished, base 4.12 V
+ 228.36   bzz       504 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 228.36   waggle    604 ms  peak  1353 deg/s  turned    -82 deg (-0.2 turns)
+ 228.36   turn      188 ms  peak  2001 deg/s  turned   -153 deg (-0.4 turns)
+ 228.36   settle    154 ms  peak  2001 deg/s  turned   -279 deg (-0.8 turns)
+ 228.36   waggle    604 ms  peak  2001 deg/s  turned   -244 deg (-0.7 turns)
+ 228.36   turn      113 ms  peak  1983 deg/s  turned   +151 deg (0.4 turns)
+ 228.37   settle    154 ms  peak  1983 deg/s  turned   +269 deg (0.7 turns)
+ 228.37   waggle    604 ms  peak  1239 deg/s  turned    +61 deg (0.2 turns)
+ 228.37   bloom    1204 ms  peak   718 deg/s  turned    +43 deg (0.1 turns)
+ 228.37 event putdown
+ 229.07 state home
+ 278.53 event pickup
+ 291.97 event putdown

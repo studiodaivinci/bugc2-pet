@@ -1,0 +1,57 @@
+# The design review's changes: aim hint and wall bounce, tie or beat the Maker, pause > back to robot, resume.
+reset
+days -1
+wait 0.5
+shot r01_title
+a
+wait 0.5
+a
+wait 0.5
+a
+wait 2.2
+a
+wait 0.4
+shot r02_aim
+yaw 100
+wait 0.2
+shot r03_aim_wall
+yaw 120
+wait 0.2
+shot r04_aim_down
+yaw 0
+wait 0.2
+hold 0.9
+wait 5
+shot r05_after1
+a
+hold 0.6
+wait 5
+shot r06_after2
+a
+hold 0.5
+wait 5
+shot r07_after3
+a
+wait 1
+shot r08_card
+a
+wait 2.5
+b
+wait 0.3
+shot r09_pause
+b
+wait 0.2
+shot r10_pause_robot
+a
+wait 0.3
+begin
+wait 0.5
+shot r11_resume
+b
+wait 0.2
+shot r12_resume_new
+b
+wait 0.2
+a
+wait 2.5
+shot r13_back_in

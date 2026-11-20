@@ -1,0 +1,71 @@
+   0.37 pet 0.4: face, hatching, song, golf, seven dances with sound (motors on)
+   0.37 state home, scene play, hatched 1, days 1, boots 59
+   0.37 stick 4220 mV (100%), base 4.12 V, volume 128 (muted), rotation 0, frames 1, motors on
+   0.37 heap 65940 (largest 34804), psram 1887576, wifi <ip>
+   0.37 built Nov 11 2026 07:37:48
+   0.37 OK
+  16.82 event pickup
+  18.07 event shake
+  19.84 press big
+  19.84 state menu
+  27.62 press big
+  27.77 sound on (menu)
+  29.14 press big
+  29.21 sound off (menu)
+  30.16 press big
+  30.33 sound on (menu)
+  42.27 press big
+  42.56 sound off (menu)
+  42.70 press big
+  43.26 sound on (menu)
+  43.34 press big
+  43.49 sound off (menu)
+  45.10 press big
+  45.24 sound on (menu)
+  46.05 press big
+  47.06 state home
+  48.24 press big
+  48.25 state menu
+  52.89 press big
+  52.97 state pick
+  55.01 press big
+  56.86 state power
+  59.16 event putdown
+  59.16 on the floor
+  62.69 dancing: spider
+  63.17 event pickup
+  63.66 event shake
+  67.36 event putdown
+  67.36 state home
+  67.40 dance spider: finished, base 4.11 V
+  67.40   creep     352 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  67.40   shiver    403 ms  peak   748 deg/s  turned    -24 deg (-0.1 turns)
+  67.40   eek       481 ms  peak  1506 deg/s  turned    -80 deg (-0.2 turns)
+  67.40   shiver   2301 ms  peak   996 deg/s  turned    +61 deg (0.2 turns)
+  67.40   phew     1113 ms  peak   211 deg/s  turned     +0 deg (0.0 turns)
+  86.65 event pickup
+  89.03 press big
+  89.03 state menu
+  91.36 press big
+  91.47 state pick
+ 121.27 event putdown
+ 129.75 event pickup
+ 167.23 press big
+ 168.05 state power
+ 168.74 event shake
+ 169.91 event putdown
+ 169.91 on the floor
+ 175.75 dancing: hummingbird
+ 176.09 dance hummingbird: not on the floor, base 4.11 V
+ 176.09   hum       300 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+ 180.46 state home
+ 185.24 event pickup
+ 209.74 event putdown
+ 540.60 state nap
+ 546.10 state doze
+ 842.64 pet 0.4: face, hatching, song, golf, seven dances with sound (motors on)
+ 842.64 state doze, scene nap, hatched 1, days 1, boots 59
+ 842.66 stick 4264 mV (100%), base 4.08 V, volume 128, rotation 0, frames 1, motors on
+ 842.66 heap 69800 (largest 36852), psram 1887576, wifi <ip>
+ 842.66 built Nov 11 2026 07:37:48
+ 842.66 OK

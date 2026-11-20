@@ -1,0 +1,10 @@
+{
+  "name": "petconfig",
+  "version": "0.1.0",
+  "description": "The robot's names (the kid, the Maker, the golf players): edit src/pet_config.h",
+  "frameworks": ["arduino"],
+  "platforms": ["espressif32"],
+  "build": {
+    "srcDir": "src"
+  }
+}

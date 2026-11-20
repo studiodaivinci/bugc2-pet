@@ -1,0 +1,35 @@
+# The robot: toy props for the face animations. One spine for the whole batch.
+# Painted wooden toys: they rhyme with the golf game's toy box. Shown at about 90 px on a 135x240 screen, so big simple shapes.
+
+# 1 cheetah
+A single chunky painted wooden toy cheetah, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: golden yellow body with round black spots, bold black tear stripes running from the inner corners of its eyes down to its mouth, white muzzle and belly, a long tail with black rings and a white tip. It is caught mid-sprint, legs stretched out, a big simple silhouette that reads from across a room. Small glossy black painted eyes with a white highlight. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Three-quarter side view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 2 honeybee
+A single chunky painted wooden toy honeybee, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a plump round body in bold bright yellow and black stripes, two clear frosted-glass wings on its back, big glossy black eyes, two short antennae with little ball tips, a tiny stinger. Hovering, a big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Three-quarter front view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 3 hummingbird
+A single chunky painted wooden toy hummingbird, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: shimmering emerald green back, a ruby red throat, white chest, a long thin black beak, both wings raised high in a sharp V. Hovering, a big simple silhouette that reads from across a room. Small glossy black painted eye with a white highlight. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Side view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 4 jumping spider
+A single chunky painted wooden toy jumping spider, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a round fuzzy-looking black body with a white stripe and a small orange patch, eight short bendy legs with white bands, and a cluster of shiny black eyes with two huge round eyes in front that make it look cute and curious. A big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 5 owl
+A single chunky painted wooden toy owl, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a round egg-shaped body in warm chestnut brown with cream spots, a pale heart-shaped face, two huge round bright orange eyes with big black pupils and white highlights, small pointed ear tufts, folded wings, little orange feet. A big simple silhouette that reads from across a room. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 6 spinner dolphin
+A single chunky painted wooden toy spinner dolphin, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: dark slate grey back, a lighter grey stripe along its side, a pale cream belly, a long thin beak, a friendly smile, a curved dorsal fin. It is leaping in a joyful curved arc. A big simple silhouette that reads from across a room. Small glossy black painted eye with a white highlight. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Side view, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 7 bat
+A single chunky painted wooden toy fruit bat, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: a fuzzy-looking warm orange-brown body and head, big pointed ears, a small black nose, wings spread wide as dark chocolate brown panels with lighter wooden finger ribs. A big simple silhouette that reads from across a room. Small glossy black painted eyes with a white highlight. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, wings fully open, the whole toy in frame and centered, isolated on a transparent background. No text, no base, no ground shadow.
+
+# 8 egg
+A single large egg standing upright on its wide end, a smooth matte eggshell in warm cream, covered in small irregular speckles of deep teal and burnt orange like a wild bird's egg, a few larger blotches near the top. Soft warm studio light from the upper left, gentle shading, one soft highlight. Front view, the whole egg in frame and centered, isolated on a transparent background. No nest, no text, no ground shadow.
+
+# 9 birthday cake
+A single chunky painted wooden toy birthday cake, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: two round layers of chocolate brown sponge with thick white icing dripping over the edges, rainbow sprinkles, and eight thin candles with red and white stripes standing on top, not lit. A big simple silhouette. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Three-quarter front view from slightly above, the whole toy in frame and centered, isolated on a transparent background. No text, no plate, no ground shadow.
+
+# 10 treat
+A single chunky painted wooden toy cookie, carved from smooth beech wood: a thick round golden-brown cookie with a bold yellow lightning bolt of icing across the top and a few sugar sparkles. A big simple silhouette. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Three-quarter view from slightly above, the whole toy in frame and centered, isolated on a transparent background. No text, no plate, no ground shadow.
+
+# 11 flower
+A single chunky painted wooden toy flower, carved from smooth beech wood in rounded, simplified shapes, painted in glossy enamel: five round bubblegum pink petals around a fat yellow centre, a short green stem with one round leaf. A big simple silhouette. Soft warm studio light from the upper left, gentle shading and one soft glossy highlight. Front view, the whole toy in frame and centered, isolated on a transparent background. No text, no pot, no ground shadow.

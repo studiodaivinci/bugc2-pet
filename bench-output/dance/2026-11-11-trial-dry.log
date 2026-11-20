@@ -1,0 +1,31 @@
+   0.96 pet 0.6: face, hatching, song, golf, seven dances that travel, with sound (motors on)
+   0.96 state home, scene play, hatched 1, days 1, boots 62
+   0.96 stick 4270 mV (100%), base 4.09 V, volume 128 (muted), rotation 0, frames 1, motors on
+   0.96 heap 66060 (largest 34804), psram 1887576, wifi <ip>
+   0.96 built Nov 11 2026 12:34:47
+   0.96 OK
+   0.96 motors off (dances are lights only)
+   0.96 OK
+   0.96 trial: forward, back, left, right, left and right at 40, a veer, a circle
+   0.96 OK
+   0.96 motors on
+   0.96 OK
+  15.63 dance trial (dry): finished, base 0.00 V
+  15.63   ready     803 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.64   fwd       702 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.64   rest      601 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.64   back      702 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.64   rest     1201 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.64   left      703 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.65   rest      601 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.65   right     703 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.65   rest     1201 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.66   left40    701 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.66   rest      601 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.66   right40   701 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.67   rest     1201 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.67   veer      604 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.67   rest      601 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.68   unveer    604 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.68   rest     1201 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)
+  15.68   circle   1601 ms  peak     0 deg/s  turned     +0 deg (0.0 turns)

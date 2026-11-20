@@ -1,0 +1,47 @@
+# A walk through every screen.
+reset
+days 0
+wait 0.5
+shot 01_title
+a
+wait 0.4
+shot 02_players
+tilt 0 -0.5
+wait 0.25
+tilt 0 0
+wait 0.3
+tilt 0 -0.5
+wait 0.25
+tilt 0 0
+wait 0.3
+a
+wait 0.2
+tilt 0 0.5
+wait 0.25
+tilt 0 0
+wait 0.2
+tilt 0 0.5
+wait 0.25
+tilt 0 0
+wait 0.2
+shot 03_players_two
+a
+wait 0.3
+shot 04_course
+a
+wait 0.3
+shot 05_pageturn
+wait 1.5
+shot 06_turn
+a
+wait 0.3
+shot 07_aim
+hold 0.9
+wait 0.4
+shot 08_rolling
+wait 4
+shot 09_after
+a
+hold 0.7
+wait 5
+shot 10_after2

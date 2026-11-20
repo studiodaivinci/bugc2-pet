@@ -1,0 +1,15 @@
+   0.26 pet 0.10: face, hatching, song, golf, seven dances, Trick Lab with the remote (motors on)
+   0.26 state home, scene play, hatched 1, days 1, boots 70
+   0.26 stick 3766 mV (56%), base 4.05 V, volume 128, rotation 0, frames 1, motors on
+   0.26 heap 62104 (largest 31732), psram 1887616, wifi <ip>
+   0.26 remote learned, 0 frames heard (3 edges), latest trick 0 moves
+   0.26 built Nov 11 2026 17:22:20
+   0.26 OK
+ 157.04 state nap
+ 162.57 state doze
+ 462.74 event pickup
+ 462.74 state wake
+ 469.17 state home
+ 481.22 event putdown
+ 661.23 state nap
+ 666.74 state doze

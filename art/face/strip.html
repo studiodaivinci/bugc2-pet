@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Strip</title>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lilita+One&display=swap" rel="stylesheet">
+<style>body{background:#1b1d1f;color:#ccc;font:12px system-ui;margin:8px}.row{display:flex;gap:6px;margin-bottom:8px;align-items:flex-start}.lab{width:110px;flex:none;font-weight:600}canvas{width:135px;height:240px;border-radius:4px}.c{display:flex;flex-direction:column;align-items:center;font-size:10px}</style>
+</head><body><div id="out"></div>
+<script src="engine.js"></script><script src="player.js"></script><script src="scenes.js"></script>
+<script>
+const q = new URLSearchParams(location.search);
+const skin = q.get('skin') || 'marble', n = +(q.get('n') || 7), back = q.get('back') || null;
+const ids = q.get('ids') ? q.get('ids').split(',') : RF_SCENES.map(s => s.id);
+const ASSET_KEYS = ['cheetah','honeybee','hummingbird','spider','owl','dolphin','bat','chameleon','egg','cake','treat','flower','golfflag'];
+window.RF_ASSETS = {};
+for (const k of ASSET_KEYS) RF_ASSETS[k] = RF.loadBitmap('assets/' + k + '.png', k === 'egg' ? 112 : k === 'cake' ? 104 : 100);
+const sizes = {};
+RF.loadFonts(['30px "Bagel Fat One"', '20px "Lilita One"']).then(() => new Promise(r => setTimeout(r, 600))).then(() => {
+  const out = document.getElementById('out');
+  for (const id of ids) {
+    const sc = RF_SCENES.find(s => s.id === id); if (!sc) continue;
+    const row = document.createElement('div'); row.className = 'row'; out.appendChild(row);
+    const lab = document.createElement('div'); lab.className = 'lab'; lab.textContent = id; row.appendChild(lab);
+    const dur = sc.dur || 4;
+    for (let i = 0; i < n; i++) {
+      const t = q.get('t') ? +q.get('t').split(',')[i] : (dur * (i + 0.5) / n);
+      if (isNaN(t)) continue;
+      const c = document.createElement('div'); c.className = 'c';
+      const cv = document.createElement('canvas'); cv.width = 135; cv.height = 240; c.appendChild(cv);
+      c.appendChild(document.createTextNode(t.toFixed(1) + 's')); row.appendChild(c);
+      try { const p = new RF.Player(cv, sc, { skin, back }); p.renderAt(t); } catch (e) { console.error(id, e.stack); }
+    }
+  }
+  document.title = 'ready';
+});
+</script></body></html>

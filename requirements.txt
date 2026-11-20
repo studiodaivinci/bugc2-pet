@@ -1,0 +1,10 @@
+# Building, installing and talking to the robot
+platformio==6.2.0
+pyserial==3.5
+
+# Only for rebuilding the art (art/face/tools, art/game/tools)
+pillow
+numpy
+scipy
+fonttools
+websockets

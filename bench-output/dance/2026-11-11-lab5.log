@@ -1,0 +1,60 @@
+   0.30 pet 0.9: face, hatching, song, golf, seven dances, Trick Lab with the remote (motors on)
+   0.30 state wake, scene wake-up, hatched 1, days 1, boots 68
+   0.30 stick 3866 mV (71%), base 4.08 V, volume 128, rotation 0, frames 1, motors on
+   0.30 heap 65424 (largest 34804), psram 1887616, wifi <ip>
+   0.30 remote learned, 0 frames heard (3 edges), tricks remembered 0
+   0.30 built Nov 11 2026 17:09:21
+   0.30 OK
+   1.15 second frame off (not enough memory), internal RAM free 67356
+   1.65 state home
+  43.78 event pickup
+  44.84 press big
+  44.84 state menu
+  47.32 press big
+  47.39 state lab
+  48.54 event shake
+  49.73 event putdown
+  50.39 remote 36c9ff00 spin
+  51.44 dance trick: finished, base 4.06 V
+  51.45   spin     1006 ms  peak  2001 deg/s  turned   +979 deg (2.7 turns)
+  52.27 remote f807ff00 dash
+  53.02 dance trick: finished, base 4.07 V
+  53.02   dash      701 ms  peak   456 deg/s  turned    +12 deg (0.0 turns)  steered, off by up to 32 deg
+  54.48 remote fa05ff00 scoot
+  55.14 dance trick: finished, base 4.05 V
+  55.14   scoot     604 ms  peak   602 deg/s  turned    -46 deg (-0.1 turns)  steered, off by up to 43 deg
+  57.51 remote 36c9ff00 spin
+  58.57 dance trick: finished, base 4.07 V
+  58.57   spin     1006 ms  peak  2001 deg/s  turned  +1053 deg (2.9 turns)
+  61.86 remote 3bc4ff00 go
+  64.36 remote fe01ff00 freeze
+  64.41 dance trick: freeze, base 4.07 V
+  64.41   spin     1005 ms  peak  2001 deg/s  turned  +1031 deg (2.9 turns)
+  64.41   beat      801 ms  peak  2001 deg/s  turned   -292 deg (-0.8 turns)
+  64.42   dash      662 ms  peak   285 deg/s  turned    +39 deg (0.1 turns)  steered, off by up to 53 deg
+  66.36 remote 3bc4ff00 go
+  71.83 dance trick: finished, base 4.06 V
+  71.84   spin     1006 ms  peak  2001 deg/s  turned  +1052 deg (2.9 turns)
+  71.84   beat      801 ms  peak  2001 deg/s  turned   -291 deg (-0.8 turns)
+  71.84   dash      704 ms  peak   360 deg/s  turned    +31 deg (0.1 turns)  steered, off by up to 46 deg
+  71.84   beat      261 ms  peak   590 deg/s  turned    -80 deg (-0.2 turns)
+  71.85   scoot     605 ms  peak   774 deg/s  turned     +2 deg (0.0 turns)  steered, off by up to 77 deg
+  71.85   beat      261 ms  peak   489 deg/s  turned    -33 deg (-0.1 turns)
+  71.86   spin     1006 ms  peak  2001 deg/s  turned  +1045 deg (2.9 turns)
+  71.86   tada      804 ms  peak  2001 deg/s  turned   -286 deg (-0.8 turns)
+  73.31 remote 3bc4ff00 go
+  78.81 dance trick: finished, base 4.06 V
+  78.81   spin     1005 ms  peak  2001 deg/s  turned  +1045 deg (2.9 turns)
+  78.81   beat      801 ms  peak  2001 deg/s  turned   -281 deg (-0.8 turns)
+  78.81   dash      703 ms  peak   513 deg/s  turned    -15 deg (-0.0 turns)  steered, off by up to 50 deg
+  78.82   beat      261 ms  peak   284 deg/s  turned    -18 deg (-0.1 turns)
+  78.82   scoot     602 ms  peak   998 deg/s  turned   +159 deg (0.4 turns)  steered, off by up to 124 deg
+  78.82   beat      261 ms  peak   153 deg/s  turned     -6 deg (-0.0 turns)
+  78.83   spin     1006 ms  peak  2001 deg/s  turned  +1051 deg (2.9 turns)
+  78.83   tada      804 ms  peak  2001 deg/s  turned   -281 deg (-0.8 turns)
+  82.82 event pickup
+  86.06 event flip
+  89.27 event unflip
+  96.86 press big
+  97.01 trick kept: ZIPPY TACO (4 moves, slot 0)
+ 114.13 event putdown
